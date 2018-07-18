@@ -3,13 +3,7 @@ pipeline {
 	stages {
 		stage('Init') {
 			steps {
-				echo "Build ID: $BUILD_ID"
 				echo "Build Number: $BUILD_NUMMBER"
-				echo "Job Name: $JOB_NAME"
-				echo "Workspace: $WORKSPACE"
-				echo "Jenkins Homme: $JENKINS_HOME"
-				echo "Job url: $JOB_URL"
-				echo "Build_url: $BUILD_URL"
 			}
 		}
 	}
