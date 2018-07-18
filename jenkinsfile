@@ -16,8 +16,8 @@ pipeline {
 			steps {
 				echo "Java Home: $JAVA_HOME"
 				echo "Maven Home: $M2HOME"
-				echo $mvn --version
-				echo $java -version
+				`mvn --version`
+				`java -version`
 			}
 		}
 		stage('Deploy') {
