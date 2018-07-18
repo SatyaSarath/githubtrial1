@@ -4,6 +4,7 @@ pipeline {
 		stage('Init') {
 			steps {
 				echo "Build Number: $BUILD_NUMMBER"
+				echo "Jenkins Homme: $JENKINS_HOME"
 			}
 		}
 	}
