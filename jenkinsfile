@@ -3,8 +3,26 @@ pipeline {
 	stages {
 		stage('Init') {
 			steps {
-				echo "Build Number: $BUILD_NUMMBER";
-				echo "Jenkins Homme: $JENKINS_HOME";
+				echo "Build ID: $BUILD_ID"
+				echo "Build Number: $BUILD_NUMBER"
+				echo "Job Name: $JOB_NAME"
+				echo "Workspace: $WORKSPACE"
+				echo "Jenkins Homme: $JENKINS_HOME"
+				echo "Job url: $JOB_URL"
+				echo "Build_url: $BUILD_URL"
+			}
+		}
+		stage('Build') {
+			steps {
+				echo "Java Home: $JAVA_HOME"
+				echo "Maven Home: $M2HOME"
+				sh 'mvn --version'
+				sh 'java -version'
+			}
+		}
+		stage('Deploy') {
+			steps {
+				echo "Code Deploy"
 			}
 		}
 	}
